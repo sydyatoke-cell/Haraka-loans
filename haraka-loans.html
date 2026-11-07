@@ -1,40 +1,137 @@
-<!doctype html>
-<html lang="sw">
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#f07818">
-<title>Haraka Loans | Kikokotoo cha Mkopo</title>
-<style>
-:root{--orange:#f07818;--orange-dark:#bd4b08;--navy:#0d1d3a;--ink:#172033;--muted:#687386;--paper:#f5f7fb;--white:#fff}
-*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.5}
-header{background:var(--orange-dark);color:#fff;padding:15px 20px;box-shadow:0 2px 8px #0002}.nav{max-width:980px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:12px}.brand{font-weight:850;font-size:19px;letter-spacing:.2px}.brand span{color:#ffe0b8}.tag{font-size:12px;opacity:.9}
-main{max-width:980px;margin:34px auto;padding:0 16px}.hero{text-align:center;margin-bottom:22px}.hero h1{font-size:clamp(25px,5vw,36px);line-height:1.15;margin:0 0 9px;color:var(--navy)}.hero p{margin:0;color:var(--muted)}
-.layout{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(260px,.8fr);gap:20px;align-items:start}.card{background:#fff;border:1px solid #e8ebf1;border-radius:17px;padding:23px;box-shadow:0 12px 32px #14213b0c}.card h2{font-size:19px;margin:0 0 5px;color:var(--navy)}.sub{font-size:13px;color:var(--muted);margin:0 0 22px}.field{margin:20px 0}.field-top{display:flex;justify-content:space-between;gap:10px;align-items:center;font-size:14px;font-weight:650}.amount{font-size:20px;color:var(--orange-dark);font-weight:850;margin-top:3px}.value{font-weight:800;color:var(--orange-dark)}input[type=range]{width:100%;accent-color:var(--orange);margin:14px 0 2px;cursor:pointer}.limits{display:flex;justify-content:space-between;color:#8992a2;font-size:11px}.summary{background:#fff6ee;border:1px solid #ffe0c6;border-radius:12px;padding:15px;margin-top:20px}.summary-line{display:flex;justify-content:space-between;gap:12px;padding:5px 0;font-size:14px}.summary-line strong{color:var(--orange-dark)}.summary-total{border-top:1px solid #f4d2b7;margin-top:8px;padding-top:12px;font-weight:800}.btn{width:100%;border:0;border-radius:10px;background:var(--orange-dark);color:white;padding:14px 16px;font-size:15px;font-weight:800;margin-top:18px;cursor:pointer}.btn:hover{background:#a83f05}.note{font-size:12px;color:var(--muted);margin:12px 0 0}.side{background:var(--navy);color:#fff}.side h2{color:#fff}.side p{color:#d5dbea;font-size:14px}.side ul{padding-left:19px;color:#e5eaf4;font-size:13px}.side li{margin:9px 0}.notice{margin-top:20px;background:#fff;border-left:4px solid var(--orange);padding:13px 15px;border-radius:8px;font-size:12px;color:#596273}footer{text-align:center;color:#7a8495;font-size:12px;padding:28px 16px 35px}.footer-brand{font-weight:750;color:#4b5668}
-@media(max-width:720px){main{margin:25px auto}.layout{grid-template-columns:1fr}.card{padding:20px}.side{order:2}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Authentication Pipeline</title>
+  <!-- Native Bootstrap 6 Alpha 1 Layout Stylesheet -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: var(--bs-bg-2);
+      min-height: 100dvh;
+    }
+    .auth-card {
+      max-width: 440px;
+      width: 100%;
+    }
+  </style>
 </head>
-<body>
-<header><div class="nav"><div class="brand">Haraka <span>Loans</span></div><div class="tag">Kikokotoo cha mkopo</div></div></header>
-<main>
-<section class="hero"><h1>Panga mkopo wako kwa urahisi</h1><p>Tumia kikokotoo kuona makadirio ya malipo kabla ya kuwasiliana na mtoa huduma.</p></section>
-<div class="layout">
-<section class="card" aria-label="Loan calculator">
-<h2>Kikokotoo cha Mkopo</h2><p class="sub">Badilisha kiasi na muda kuona makadirio ya malipo.</p>
-<div class="field"><div class="field-top"><label for="loan">Kiasi cha mkopo</label></div><div class="amount" id="amountText">TSh 100,000</div><input id="loan" type="range" min="50000" max="2000000" step="10000" value="100000"><div class="limits"><span>TSh 50,000</span><span>TSh 2,000,000</span></div></div>
-<div class="field"><div class="field-top"><label for="months">Muda wa mkopo</label><span class="value" id="monthsText">miezi 12</span></div><input id="months" type="range" min="1" max="24" step="1" value="12"><div class="limits"><span>Mwezi 1</span><span>Miezi 24</span></div></div>
-<div class="summary"><div class="summary-line"><span>Kiasi cha mkopo</span><strong id="principal">TSh 100,000</strong></div><div class="summary-line"><span>Makadirio ya riba yote (14.05%)</span><strong id="interest">TSh 14,050</strong></div><div class="summary-line summary-total"><span>Malipo ya kila mwezi</span><strong id="monthly">TSh 9,504</strong></div><div class="summary-line"><span>Jumla ya kulipa</span><strong id="total">TSh 114,050</strong></div></div>
-<button class="btn" id="apply">OMBA TAARIFA ZAIDI</button>
-<p class="note">Haya ni makadirio ya mfano tu, si ofa ya mkopo wala idhini ya mkopo.</p>
-</section>
-<aside class="card side"><h2>Karibu Haraka Loans</h2><p>Angalia makadirio ya malipo na soma masharti yote kabla ya kukubali mkopo wowote.</p><ul><li>Hakiki jina na usajili wa mtoa huduma.</li><li>Uliza kuhusu ada, riba na adhabu za kuchelewa.</li><li>Usimpe mtu PIN, nenosiri au OTP yako.</li><li>Usilipe ada ya awali kwa mtu usiyemthibitisha.</li></ul><p><strong>Usalama wako ni muhimu.</strong></p></aside>
-</div>
-<div class="notice"><strong>Taarifa muhimu:</strong> Haraka Loans ni mfano wa tovuti huru ya kikokotoo. Haijaidhinishwa wala kuhusishwa na HaloPesa au kampuni nyingine ya simu. Hakuna maombi, malipo au uthibitishaji wa namba unaofanyika kwenye ukurasa huu.</div>
-</main>
-<footer><div class="footer-brand">Haraka Loans</div>© <span id="year"></span> · Kikokotoo cha makadirio pekee.</footer>
-<script>
-const loan=document.getElementById('loan'), months=document.getElementById('months');
-const money=n=>'TSh '+Math.round(n).toLocaleString('en-US');
-function update(){const p=Number(loan.value),m=Number(months.value),interest=p*.1405,total=p+interest,monthly=total/m;document.getElementById('amountText').textContent=money(p);document.getElementById('monthsText').textContent='miezi '+m;document.getElementById('principal').textContent=money(p);document.getElementById('interest').textContent=money(interest);document.getElementById('monthly').textContent=money(monthly);document.getElementById('total').textContent=money(total)}
-loan.addEventListener('input',update);months.addEventListener('input',update);document.getElementById('year').textContent=new Date().getFullYear();document.getElementById('apply').addEventListener('click',()=>alert('Huu ni mfano wa kikokotoo pekee. Hakuna maombi ya mkopo yanayotumwa. Ongeza mawasiliano rasmi na masharti yaliyothibitishwa kabla ya kuchapisha tovuti kwa matumizi halisi.'));update();
-</script>
-</body></html>
+<body class="d-flex align-items-center justify-content-center p-4">
+
+  <div class="card auth-card shadow-lg">
+    <!-- Component Header -->
+    <div class="card-header text-center py-4 bg-1 border-bottom">
+      <h1 class="h3 fw-bold mb-1">Verify Your Identity</h1>
+      <p class="text-sm fg-3 mb-0">Secure Verification Pipeline</p>
+    </div>
+
+    <!-- Main Dynamic Layout Container -->
+    <div class="card-body p-5">
+      <form id="authPipelineForm" autocomplete="off" novalidate>
+        
+        <!-- Step 1: Input Control with Inline Adornment Icons -->
+        <div class="form-field mb-4">
+          <label for="userCredential" class="form-label">Account Identifier</label>
+          <div class="form-control form-adorn">
+            <span class="form-adorn-icon">
+              <svg xmlns="http://w3.org" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+              </svg>
+            </span>
+            <input type="text" id="userCredential" class="form-ghost" placeholder="Enter username or mobile token" required>
+          </div>
+          <div class="invalid-feedback">Please enter a valid account token.</div>
+        </div>
+
+        <!-- Step 2: Native OTP Multi-Slot Container Component -->
+        <div class="form-group mb-4 text-center justify-items-center">
+          <label class="form-label d-block text-start w-100">One-Time Security Token</label>
+          
+          <!-- Core OtpInput Component API Layout Structure -->
+          <div class="otp otp-lg" data-bs-otp id="securityTokenContainer">
+            <input type="text" class="otp-input" id="otpRawInput" inputmode="numeric" pattern="[0-9]*" maxlength="6" autocomplete="one-time-code">
+            <div class="otp-slots" aria-hidden="true">
+              <!-- JS Initialization will explicitly generate interactive targets inside this container slot -->
+            </div>
+          </div>
+          
+          <div class="form-text text-start mt-2">Enter the verification parameter transmitted to your node.</div>
+        </div>
+
+        <!-- Step 3: Password Field backed by Native Strength Scorer Class -->
+        <div class="form-field mb-4">
+          <label for="secureKey" class="form-label">System Security Key</label>
+          <input type="password" id="secureKey" class="form-control" placeholder="Input passphrase" required>
+          
+          <!-- Native Strength Meter Segment Bar Node Integration -->
+          <div class="strength mt-2" data-bs-strength id="passphraseStrengthBar">
+            <div class="strength-segment"></div>
+            <div class="strength-segment"></div>
+            <div class="strength-segment"></div>
+            <div class="strength-segment"></div>
+          </div>
+          <span class="strength-text"></span>
+        </div>
+
+        <!-- Action Layout Area -->
+        <button type="submit" class="btn btn-solid theme-primary w-100 fw-semibold py-2">
+          Execute Verification
+        </button>
+      </form>
+    </div>
+
+    <!-- Component Footer Information -->
+    <div class="card-footer bg-1 text-center py-3 text-xs fg-4 border-top">
+      Protected by End-to-End Cryptographic Validation Protocols.
+    </div>
+  </div>
+
+  <!-- Framework ESM JavaScript Driver Hook Initialization -->
+  <script type="module">
+    import { OtpInput, Strength } from 'https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js';
+
+    // 1. Initialize Token Slot Components 
+    const otpContainer = document.getElementById('securityTokenContainer');
+    if (otpContainer) {
+      OtpInput.getOrCreateInstance(otpContainer, {
+        type: 'numeric',
+        length: 6,
+        groups:, // Splitting layout configuration directly into segments
+        separator: '·'
+      });
+    }
+
+    // 2. Attach Interactive Scoring Evaluator Class to Passphrase Input Element
+    const strengthBar = document.getElementById('passphraseStrengthBar');
+    if (strengthBar) {
+      Strength.getOrCreateInstance(strengthBar, {
+        input: '#secureKey',
+        minLength: 8,
+        messages: {
+          weak: 'Key Strength: Low / Vulnerable',
+          fair: 'Key Strength: Medium / Acceptable',
+          good: 'Key Strength: Optimal',
+          strong: 'Key Strength: Enterprise Grade High'
+        }
+      });
+    }
+
+    // 3. Prevent Form Submissions if Rules Fall Short of Validity Bounds
+    const formNode = document.getElementById('authPipelineForm');
+    formNode.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const inputVal = document.getElementById('otpRawInput').value;
+      
+      if (!formNode.checkValidity() || inputVal.length < 6) {
+        formNode.classList.add('is-invalid');
+        alert('Validation Check Failed: Ensure all security token inputs match structural configurations.');
+      } else {
+        formNode.classList.remove('is-invalid');
+        formNode.classList.add('is-valid');
+        alert('Validation Check Succeeded: Initializing secure credential pipeline payload.');
+      }
+    });
+  </script>
+</body>
+</html>
