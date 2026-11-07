@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#090909">
+<title>Haraka Loans | Mikopo kwa Urahisi</title>
+<style>
+:root{--gold:#f5c542;--gold2:#d99b18;--bg:#080808;--panel:#141414;--muted:#aaa;--line:#303030;--white:#fff}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--white);font-family:Arial,Helvetica,sans-serif;line-height:1.55}
+header{position:sticky;top:0;z-index:5;background:#090909ed;border-bottom:1px solid var(--gold);backdrop-filter:blur(10px)}
+.nav{max-width:1100px;margin:auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{font-weight:900;font-size:21px;color:var(--gold);letter-spacing:.5px}.brand span{color:white}
+nav a{color:#eee;text-decoration:none;margin-left:18px;font-size:14px}
+.wrap{max-width:1100px;margin:auto;padding:28px 20px}
+.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:25px;align-items:center;padding-top:48px;padding-bottom:42px}
+.eyebrow{color:var(--gold);font-weight:bold;text-transform:uppercase;letter-spacing:2px;font-size:12px}
+h1{font-size:clamp(34px,6vw,58px);line-height:1.05;margin:12px 0}
+.gold{color:var(--gold)}.lead{color:#c8c8c8;max-width:590px}
+.panel{background:linear-gradient(145deg,#181818,#101010);border:1px solid #383027;border-radius:18px;padding:24px;box-shadow:0 15px 45px #0008}
+.big{font-size:31px;font-weight:800;color:var(--gold)}
+.small{color:var(--muted);font-size:13px}
+.btn{border:0;border-radius:9px;background:linear-gradient(90deg,var(--gold2),var(--gold));color:#17120a;font-weight:900;padding:13px 18px;cursor:pointer;text-decoration:none;display:inline-block}
+.btn.secondary{background:#242424;color:white;border:1px solid #555}.btn:disabled{opacity:.5;cursor:not-allowed}
+section{scroll-margin-top:80px}.section-title{text-align:center;margin:15px 0 24px}.section-title h2{margin-bottom:4px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.feature{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px}
+.feature b{color:var(--gold)}.feature p{color:#bbb;font-size:14px;margin-bottom:0}
+form{display:grid;gap:13px}.fields{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+label{font-size:13px;color:#ddd;display:block;margin-bottom:5px}
+input,select,textarea{width:100%;background:#090909;border:1px solid #444;color:white;border-radius:8px;padding:12px;font:inherit}
+input:focus,select:focus,textarea:focus{outline:1px solid var(--gold);border-color:var(--gold)}
+.notice{border-left:3px solid var(--gold);padding:10px 13px;background:#211d12;color:#e5d8b2;font-size:13px;border-radius:5px}
+.hidden{display:none!important}.result{padding:14px;border-radius:9px;background:#18251a;border:1px solid #315b39;color:#d6ffdb;overflow-wrap:anywhere}
+.error{color:#ff9b9b;font-size:13px}.table-wrap{overflow:auto}table{width:100%;border-collapse:collapse;min-width:700px;font-size:13px}th,td{text-align:left;padding:11px;border-bottom:1px solid #333}th{color:var(--gold)}
+.admin-row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.status{padding:4px 8px;border-radius:20px;background:#292929}
+footer{border-top:1px solid #333;color:#999;text-align:center;padding:25px 15px;font-size:12px;margin-top:40px}
+@media(max-width:760px){.hero{grid-template-columns:1fr;padding-top:28px}.grid{grid-template-columns:1fr}.fields{grid-template-columns:1fr}.nav{padding:12px 15px}nav a{margin-left:9px;font-size:12px}.wrap{padding:22px 15px}}
+</style>
+</head>
+<body>
+<header><div class="nav"><div class="brand">HARAKA <span>LOANS</span></div><nav><a href="#home">Nyumbani</a><a href="#apply">Omba Mkopo</a><a href="#admin">Admin</a></nav></div></header>
+<main>
+<section id="home" class="wrap hero">
+ <div><div class="eyebrow">Huduma ya maombi ya mikopo</div><h1>Pata nafasi ya <span class="gold">kuomba mkopo</span> kwa urahisi.</h1>
+ <p class="lead">Jaza taarifa zako kwa usahihi na utume ombi lako kwa ajili ya mapitio. Kila ombi litakaguliwa kabla ya uamuzi wowote.</p>
+ <a class="btn" href="#apply">OMBA SASA</a></div>
+ <div class="panel"><div class="eyebrow">Mchakato rahisi</div><div class="big">Hatua 3</div><p>1. Jaza fomu ya maombi.</p><p>2. Pokea namba ya kumbukumbu.</p><p>3. Subiri timu husika ikague ombi lako.</p><div class="notice">Kutuma ombi hakumaanishi kuwa mkopo umeidhinishwa. Masharti na gharama zozote lazima zielezwe wazi kabla ya kukubali mkopo.</div></div>
+</section>
+<section class="wrap"><div class="section-title"><div class="eyebrow">Kwa nini utumie mfumo huu?</div><h2>Rahisi, wazi na salama</h2></div>
+<div class="grid"><div class="feature"><b>Fomu rahisi</b><p>Jaza taarifa muhimu bila hatua zisizo za lazima.</p></div><div class="feature"><b>Ufuatiliaji</b><p>Pata namba ya kumbukumbu ya ombi lako.</p></div><div class="feature"><b>Mapitio ya maombi</b><p>Maombi huonekana kwenye dashibodi ya msimamizi.</p></div></div></section>
+<section id="apply" class="wrap"><div class="section-title"><div class="eyebrow">Maombi ya mkopo</div><h2>Jaza fomu hapa chini</h2><p class="small">Taarifa zako zitatumika kushughulikia ombi hili pekee.</p></div>
+<div class="panel" style="max-width:760px;margin:auto"><form id="applicationForm">
+ <div class="fields"><div><label for="firstName">Jina la kwanza</label><input id="firstName" maxlength="80" required></div><div><label for="lastName">Jina la ukoo</label><input id="lastName" maxlength="80" required></div></div>
+ <div class="fields"><div><label for="phone">Nambari ya simu</label><input id="phone" type="tel" placeholder="+255..." maxlength="18" required></div><div><label for="amount">Kiasi unachoomba (TSh)</label><input id="amount" type="number" min="10000" max="50000000" step="1000" placeholder="100000" required></div></div>
+ <div class="fields"><div><label for="duration">Muda unaopendekeza</label><select id="duration"><option value="3">Miezi 3</option><option value="6">Miezi 6</option><option value="9">Miezi 9</option><option value="12">Miezi 12</option><option value="18">Miezi 18</option><option value="24">Miezi 24</option></select></div><div><label for="purpose">Madhumuni ya mkopo</label><input id="purpose" maxlength="300" placeholder="Mfano: biashara, elimu..." required></div></div>
+ <label style="display:flex;gap:9px;align-items:flex-start"><input id="consent" type="checkbox" style="width:auto;margin-top:4px" required><span>Ninakubali taarifa hizi zitumike kushughulikia ombi langu. Nimeelewa kuwa kutuma ombi si uthibitisho wa kuidhinishwa.</span></label>
+ <div class="notice">Usiweke PIN, nenosiri, au OTP ya huduma yoyote ya simu au benki kwenye fomu hii. Hatutakuomba taarifa hizo.</div>
+ <button class="btn" id="submitBtn" type="submit">WASILISHA OMBI</button><div id="formError" class="error"></div><div id="formResult" class="result hidden"></div>
+</form></div></section>
+<section id="admin" class="wrap"><div class="section-title"><div class="eyebrow">Eneo la msimamizi</div><h2>Admin Dashboard</h2></div>
+<div class="panel" style="max-width:1000px;margin:auto">
+ <div id="adminLogin"><form id="loginForm" style="max-width:420px"><label for="adminPassword">Nenosiri la msimamizi</label><input id="adminPassword" type="password" autocomplete="current-password" required><button class="btn">INGIA</button><div id="loginError" class="error"></div></form></div>
+ <div id="adminPanel" class="hidden"><div class="admin-row" style="justify-content:space-between;margin-bottom:14px"><b class="gold">Maombi yaliyopokelewa</b><button id="refreshBtn" class="btn secondary">Onyesha upya</button><button id="logoutBtn" class="btn secondary">Toka</button></div><div id="adminError" class="error"></div><div class="table-wrap"><table><thead><tr><th>Rejea</th><th>Jina</th><th>Simu</th><th>Kiasi</th><th>Muda</th><th>Tarehe</th><th>Hali</th><th>Badili hali</th></tr></thead><tbody id="applicationsBody"></tbody></table></div></div>
+</div></section>
+</main>
+<footer>© <span id="year"></span> Haraka Loans. Huduma huru ya maombi ya mikopo; si tovuti rasmi ya HaloPesa.</footer>
+<script>
+const $ = id => document.getElementById(id);
+$("year").textContent = new Date().getFullYear();
+$("applicationForm").addEventListener("submit", async e => {
+ e.preventDefault(); $("formError").textContent=""; $("formResult").classList.add("hidden"); $("submitBtn").disabled=true;
+ try {
+  const payload={firstName:$("firstName").value.trim(),lastName:$("lastName").value.trim(),phone:$("phone").value.trim(),amount:$("amount").value,duration:$("duration").value,purpose:$("purpose").value.trim(),consent:$("consent").checked};
+  const r=await fetch("/api/applications",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(payload)});
+  const data=await r.json(); if(!r.ok) throw new Error(data.error||"Imeshindikana kutuma ombi.");
+  $("formResult").innerHTML="Ombi lako limepokelewa. Namba yako ya kumbukumbu ni <strong>"+data.reference+"</strong>. Hifadhi namba hii.";
+  $("formResult").classList.remove("hidden"); $("applicationForm").reset();
+ } catch(err){$("formError").textContent=err.message}
+ finally{$("submitBtn").disabled=false}
+});
+async function checkAdmin(){
+ const r=await fetch("/api/admin/me");const d=await r.json();
+ $("adminLogin").classList.toggle("hidden",d.isAdmin);$("adminPanel").classList.toggle("hidden",!d.isAdmin);
+ if(d.isAdmin) loadApplications();
+}
+$("loginForm").addEventListener("submit",async e=>{
+ e.preventDefault();$("loginError").textContent="";
+ try{const r=await fetch("/api/admin/login",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({password:$("adminPassword").value})});const d=await r.json();if(!r.ok)throw new Error(d.error);$("adminPassword").value="";await checkAdmin()}
+ catch(err){$("loginError").textContent=err.message}
+});
+async function loadApplications(){
+ $("adminError").textContent="";
+ try{
+  const r=await fetch("/api/admin/applications");const rows=await r.json();if(!r.ok)throw new Error(rows.error);
+  $("applicationsBody").innerHTML="";
+  rows.forEach(a=>{
+   const tr=document.createElement("tr");
+   const values=[a.reference,a.first_name+" "+a.last_name,a.phone,"TSh "+Number(a.amount).toLocaleString(),a.duration_months+" miezi",new Date(a.created_at).toLocaleString()];
+   values.forEach(v=>{const td=document.createElement("td");td.textContent=v;tr.appendChild(td)});
+   const statusTd=document.createElement("td");statusTd.textContent=a.status;tr.appendChild(statusTd);
+   const actionTd=document.createElement("td");const sel=document.createElement("select");
+   ["Pending","Under review","Approved","Rejected"].forEach(s=>{const o=document.createElement("option");o.value=s;o.textContent=s;if(s===a.status)o.selected=true;sel.appendChild(o)});
+   sel.addEventListener("change",()=>updateStatus(a.id,sel.value));actionTd.appendChild(sel);tr.appendChild(actionTd);$("applicationsBody").appendChild(tr);
+  });
+  if(!rows.length){const tr=document.createElement("tr");const td=document.createElement("td");td.colSpan=8;td.textContent="Bado hakuna maombi.";tr.appendChild(td);$("applicationsBody").appendChild(tr)}
+ }catch(err){$("adminError").textContent=err.message}
+}
+async function updateStatus(id,status){
+ const r=await fetch("/api/admin/applications/"+id,{method:"PATCH",headers:{"Content-Type":"application/json"},body:JSON.stringify({status})});
+ if(!r.ok){const d=await r.json();$("adminError").textContent=d.error||"Imeshindikana kubadili hali.";return}loadApplications();
+}
+$("refreshBtn").addEventListener("click",loadApplications);
+$("logoutBtn").addEventListener("click",async()=>{await fetch("/api/admin/logout",{method:"POST"});checkAdmin()});
+checkAdmin();
+</script>
+</body></html>
